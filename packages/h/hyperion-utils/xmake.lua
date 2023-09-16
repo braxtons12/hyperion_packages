@@ -37,7 +37,7 @@ package("hyperion-utils")
             languages = "cxx20"
         },
     })
-    add_requires("tracy", {
+    add_deps("tracy", {
         system = false,
         external = true,
         configs = {
@@ -45,7 +45,7 @@ package("hyperion-utils")
         }
     })
     if not is_plat("windows") then
-        add_requires("libbacktrace", {
+        add_deps("libbacktrace", {
             system = false,
             external = true,
         })
