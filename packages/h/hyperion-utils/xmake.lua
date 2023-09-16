@@ -37,14 +37,19 @@ package("hyperion-utils")
             languages = "cxx20"
         },
     })
-    add_deps("vcpkg::tracy", {
-        alias = "tracy",
+    add_requires("tracy", {
         system = false,
         external = true,
         configs = {
             languages = "cxx20"
         }
     })
+    if not is_plat("windows") then
+        add_requires("libbacktrace", {
+            system = false,
+            external = true,
+        })
+    end
 
     on_install(function(package)
         local configs = {}
