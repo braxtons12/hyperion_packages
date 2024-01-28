@@ -13,12 +13,6 @@ add_deps("doctest", {
         languages = "cxx20"
     }
 })
-if not is_plat("windows") then
-    add_deps("libbacktrace", {
-        system = false,
-        external = true,
-    })
-end
 
 on_install(function(package)
     local configs = {}
