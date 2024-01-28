@@ -28,7 +28,6 @@ end)
 
 on_install(function(package)
     local configs = {
-        as_user = true,
     }
     if package:config("hyperion_enable_tracy") then
         configs.hyperion_enable_tracy = true
