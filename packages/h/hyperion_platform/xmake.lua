@@ -14,10 +14,8 @@ add_deps("doctest", {
     }
 })
 
-on_install(function(package)
-    local configs = {}
-    if package:config("hyperion_tracy_enable") then
-        configs.hyperion_enable_tracy = true
+on_load(function(package)
+    if package:config("hyperion_enable_tracy") then
         package:add("deps", "tracy", {
             system = false,
             external = true,
@@ -25,6 +23,13 @@ on_install(function(package)
                 languages = "cxx20"
             }
         })
+    end
+end)
+
+on_install(function(package)
+    local configs = {}
+    if package:config("hyperion_enable_tracy") then
+        configs.hyperion_enable_tracy = true
     end
     import("package.tools.xmake").install(package, configs)
 end)
