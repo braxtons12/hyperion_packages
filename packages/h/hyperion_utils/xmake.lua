@@ -1,10 +1,11 @@
-package("hyperion-utils")
-    set_homepage("https://braxtons12.github.io/Hyperion-Utils/")
+---@diagnostic disable: undefined-global,undefined-field
+package("hyperion_utils")
+    set_homepage("https://braxtons12.github.io/hyperion_utils/")
     set_description("Collection of C++20 error handling, I/O, and logging utilities. Part of Hyperion Engine.")
     set_license("MIT")
-    add_urls("https://github.com/braxtons12/Hyperion-Utils.git")
+    add_urls("https://github.com/braxtons12/hyperion_utils.git")
 
-    add_configs("hyperion_tracy_enable", {description = "Enable Tracy profiling", default = false, values = {false, true}})
+    add_configs("hyperion_enable_tracy", {description = "Enable Tracy profiling", default = false, values = {false, true}})
     add_deps("doctest", {
         system = false,
         external = true,
