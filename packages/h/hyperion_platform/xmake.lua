@@ -12,17 +12,21 @@ add_versions("0.1.3", "30bd4fc2c4191154b62a3b4cd39dd4d4362a7253")
 add_versions("0.1.4", "d029acd40a6c2e94270bd10634ad53f2a37c0211")
 
 add_configs("hyperion_enable_tracy", { description = "Enable Tracy profiling", default = false, values = { false, true } })
-add_deps("doctest", {
-    system = false,
-    external = true,
-    configs = {
-        languages = "cxx20"
-    }
-})
+add_configs("hyperion_enable_testing", { description = "Enable Doctest Testing Macros", default = false, values = { false, true } })
 
 on_load(function(package)
     if package:config("hyperion_enable_tracy") then
         package:add("deps", "tracy", {
+            system = false,
+            external = true,
+            configs = {
+                languages = "cxx20"
+            }
+        })
+    end
+
+    if package:config("hyperion_enable_testing") then
+        package:add("deps", "doctest", {
             system = false,
             external = true,
             configs = {
@@ -37,6 +41,9 @@ on_install(function(package)
     }
     if package:config("hyperion_enable_tracy") then
         configs.hyperion_enable_tracy = true
+    end
+    if package:config("hyperion_enable_testing") then
+        configs.hyperion_enable_testing = true
     end
     import("package.tools.xmake").install(package, configs)
 end)

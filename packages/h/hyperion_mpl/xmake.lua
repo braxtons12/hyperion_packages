@@ -10,14 +10,6 @@ add_versions("0.1.0", "ba55aa61d920ca02a91cc3e9fe107d0e0deea56f")
 add_configs("hyperion_enable_tracy",
     { description = "Enable Tracy profiling", default = false, values = { false, true } })
 
-add_deps("doctest", {
-    system = false,
-    external = true,
-    configs = {
-        languages = "cxx20"
-    }
-})
-
 on_load(function(package)
     package:add("deps", "hyperion_platform",
         {
