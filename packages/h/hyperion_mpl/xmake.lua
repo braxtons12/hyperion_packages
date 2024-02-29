@@ -6,8 +6,6 @@ set_license("MIT")
 add_urls("https://github.com/braxtons12/hyperion_mpl/archive/refs/tags/v$(version).tar.gz",
          "https://github.com/braxtons12/hyperion_mpl.git")
 
-add_repositories("hyperion https://github.com/braxtons12/hyperion_packages.git")
-
 add_configs("hyperion_enable_tracy",
     { description = "Enable Tracy profiling", default = false, values = { false, true } })
 
