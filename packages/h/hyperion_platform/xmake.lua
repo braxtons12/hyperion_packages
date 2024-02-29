@@ -9,6 +9,7 @@ add_versions("0.1.0", "05014618e239b25230e984a88545844511a7048f")
 add_versions("0.1.1", "ddf7ac8a59a7bd9a4611e109424b00de3983ef8f")
 add_versions("0.1.2", "d8d4d02d39bbe0565fffd32657917f0c2eb255d6")
 add_versions("0.1.3", "30bd4fc2c4191154b62a3b4cd39dd4d4362a7253")
+add_versions("0.1.4", "d029acd40a6c2e94270bd10634ad53f2a37c0211")
 
 add_configs("hyperion_enable_tracy", { description = "Enable Tracy profiling", default = false, values = { false, true } })
 add_deps("doctest", {
