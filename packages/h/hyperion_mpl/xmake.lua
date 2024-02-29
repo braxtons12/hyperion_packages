@@ -5,6 +5,7 @@ set_description("C++20 Value-oriented Metaprogramming Library")
 set_license("MIT")
 add_urls("https://github.com/braxtons12/hyperion_mpl/archive/refs/tags/v$(version).tar.gz",
          "https://github.com/braxtons12/hyperion_mpl.git")
+add_versions("0.1.0", "ba55aa61d920ca02a91cc3e9fe107d0e0deea56f")
 
 add_configs("hyperion_enable_tracy",
     { description = "Enable Tracy profiling", default = false, values = { false, true } })
