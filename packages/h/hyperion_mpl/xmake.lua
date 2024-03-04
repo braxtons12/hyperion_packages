@@ -8,6 +8,7 @@ add_urls("https://github.com/braxtons12/hyperion_mpl/archive/refs/tags/v$(versio
 add_versions("0.1.0", "ba55aa61d920ca02a91cc3e9fe107d0e0deea56f")
 add_versions("0.2.0", "8c402100dbfb48d3d4246fbf0a8f3e1ea0715673")
 add_versions("0.3.0", "8fdd8e99e4c9dfa4049b9f609143b97627decb2f")
+add_versions("0.4.0", "5511fa68bf047948e161bb503b7795f618dd0e36")
 
 add_configs("hyperion_enable_tracy",
     { description = "Enable Tracy profiling", default = false, values = { false, true } })
