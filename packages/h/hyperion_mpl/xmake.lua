@@ -30,6 +30,14 @@ on_load(function(package)
                 languages = "cxx20"
             },
         })
+
+    if package:config("hyperion_enable_tracy") then
+        package:add("defines", "TRACY_ENABLE=1", {public = true})
+    end
+
+    if package:config("hyperion_enable_testing") then
+        package:add("defines", "HYPERION_ENABLE_TESTING=1", {public = true})
+    end
 end)
 
 on_install(function(package)

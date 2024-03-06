@@ -27,6 +27,8 @@ on_load(function(package)
                 languages = "cxx20"
             }
         })
+
+        package:add("defines", "TRACY_ENABLE=1", {public = true})
     end
 
     if package:config("hyperion_enable_testing") then
@@ -37,6 +39,8 @@ on_load(function(package)
                 languages = "cxx20"
             }
         })
+
+        package:add("defines", "HYPERION_ENABLE_TESTING=1", {public = true})
     end
 end)
 
