@@ -73,6 +73,5 @@ on_install(function(package)
     if package:config("hyperion_enable_tracy") then
         configs.hyperion_enable_tracy = true
     end
-    configs.hyperion_enable_testing = true
     import("package.tools.xmake").install(package, configs)
 end)
