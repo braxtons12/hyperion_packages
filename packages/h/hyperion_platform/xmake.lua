@@ -14,6 +14,7 @@ add_versions("0.2.0", "d7e0b560b77d43d68da8fdb539dfc1594b8c0a2d")
 add_versions("0.2.1", "cbb107f64b119dbb5a390703fd93ceb351b73954")
 add_versions("0.2.2", "0c73e49786e74915507b2385566ba65bf1c434fd")
 add_versions("0.2.3", "da23218884b1813efa625ccd86d0c6bc734ea579")
+add_versions("0.2.4", "6b224c9ca90c223a17d7bca788f905f488bfc442")
 
 add_configs("hyperion_enable_tracy", { description = "Enable Tracy profiling", default = false, values = { false, true } })
 add_configs("hyperion_enable_testing", { description = "Enable Doctest Testing Macros", default = false, values = { false, true } })
