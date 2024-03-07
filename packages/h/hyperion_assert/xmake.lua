@@ -15,7 +15,6 @@ on_load(function(package)
             external = true,
             configs = {
                 hyperion_enable_tracy = package:config("hyperion_enable_tracy"),
-                hyperion_enable_testing = true,
                 languages = "cxx20"
             },
         })
@@ -25,18 +24,10 @@ on_load(function(package)
             external = true,
             configs = {
                 hyperion_enable_tracy = package:config("hyperion_enable_tracy"),
-                hyperion_enable_testing = true,
                 languages = "cxx20"
             },
         })
 
-    package:add("deps", "doctest", {
-        system = false,
-        external = true,
-        configs = {
-            languages = "cxx20",
-        }
-    })
     package:add("deps", "fmt", {
         system = false,
         external = true,
@@ -59,8 +50,6 @@ on_load(function(package)
             stacktrace = true,
         }
     })
-
-    package:add("defines", "HYPERION_ENABLE_TESTING=1", {public = true})
 
     if package:config("hyperion_enable_tracy") then
         package:add("defines", "TRACY_ENABLE=1", {public = true})
