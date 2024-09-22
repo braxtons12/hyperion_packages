@@ -21,6 +21,7 @@ add_versions("0.3.2", "d77ad875bd27ed56525d7497a2df768976af91990ab0569bbf91c476d
 add_versions("0.4.0", "e62ab8fef26e8c37b263275428cb9ca156ddce877b2b4cc9a860d058d5db6c38")
 add_versions("0.4.1", "9bff7f01f58d0e9d68b57520956e95b9c4f35d2c255bc25d02972f3a9da0b627")
 add_versions("0.4.2", "f7caa3aaa3fbd78159bc6d9d702c0c39751fe4dbe18de610165f51f3a8a3bb2c")
+add_versions("0.5.0", "4995fc42f12ad23ee7ca00b5addc5a3536be325d3640c68b7e926e701c53f7f2")
 
 add_configs("hyperion_enable_tracy", { description = "Enable Tracy profiling", default = false, values = { false, true } })
 
@@ -33,6 +34,17 @@ on_load(function(package)
                 languages = "cxx20"
             }
         })
+
+        local version = package:version();
+        if version:major() > 0 or version:minor() > 5 then
+            package:add("deps", "fast_float", {
+                system = false,
+                external = true,
+                configs = {
+                    languages = "cxx20",
+                },
+            })
+        end
 
         package:add("defines", "TRACY_ENABLE=1", {public = true})
     end
