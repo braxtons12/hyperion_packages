@@ -39,7 +39,7 @@ on_load(function(package)
     end
 
     local version = package:version();
-    if version:major() > 0 or version:minor() >= 5 then
+    if version == nil or version:major() > 0 or version:minor() >= 5 then
         package:add("deps", "fast_float", {
             system = false,
             external = true,
