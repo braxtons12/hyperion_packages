@@ -35,18 +35,18 @@ on_load(function(package)
             }
         })
 
-        local version = package:version();
-        if version:major() > 0 or version:minor() >= 5 then
-            package:add("deps", "fast_float", {
-                system = false,
-                external = true,
-                configs = {
-                    languages = "cxx20",
-                },
-            })
-        end
-
         package:add("defines", "TRACY_ENABLE=1", {public = true})
+    end
+
+    local version = package:version();
+    if version:major() > 0 or version:minor() >= 5 then
+        package:add("deps", "fast_float", {
+            system = false,
+            external = true,
+            configs = {
+                languages = "cxx20",
+            },
+        })
     end
 end)
 
