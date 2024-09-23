@@ -42,7 +42,7 @@ on_load(function(package)
         })
     end
 
-    package:add("deps", "boost", {
+    package:add("deps", "boost 1.84", {
         system = false,
         external = true,
         configs = {
