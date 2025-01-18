@@ -1,6 +1,6 @@
 ---@diagnostic disable: undefined-global,undefined-field
 package("hyperion_assert")
-set_homepage("https://braxtons12.github.io/hyperion_mpl/")
+set_homepage("https://braxtons12.github.io/hyperion_assert/")
 set_description("C++20 Runtime Assertions Library")
 set_license("MIT")
 add_urls("https://github.com/braxtons12/hyperion_assert/archive/refs/tags/v$(version).tar.gz",
