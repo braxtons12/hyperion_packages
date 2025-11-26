@@ -26,6 +26,7 @@ add_versions("0.5.1", "b212e9f6fe0588783d1cbd9c232a23346e32cab5237f422771988d989
 add_versions("0.5.2", "189bb08d8ae0aab34aeb6d0d80fdb09f0844faeedffb919353c2760ef56379cb")
 add_versions("0.5.3", "5b2b93b852549102e3882a275f97aae5cfd26ea93f5a679d7c3cf67e795be023")
 add_versions("0.5.4", "6b0512886735b0cd9fa2be728661844294489b472ab518249b23717ff3e1b19a")
+add_versions("0.5.5", "6167d7a4e308e289d8a007c4a535caa27cecc9867b1eb92ec218cbbacf79eae3")
 
 add_configs("hyperion_enable_tracy", { description = "Enable Tracy profiling", default = false, values = { false, true } })
 
